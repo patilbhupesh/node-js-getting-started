@@ -57,6 +57,6 @@ app.use("/category", category);
 app.use("/products", items);
 app.use(apiErrorHandler);
 
-app.listen(PORT, (req, res) => {
+app.listen(process.env.PORT || PORT, (req, res) => {
   console.log(`Server Started at PORT ${PORT}`);
 });
