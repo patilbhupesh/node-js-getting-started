@@ -13,17 +13,17 @@ const apiErrorHandler = require("./error/api-error-handler");
 InitiateMongoServer();
 
 const app = express();
-const HOSTNAME = "https://damp-island-35095.herokuapp.com";
+// const HOSTNAME = "https://damp-island-35095.herokuapp.com";
 
 app.use(cors());
 app.use(express.static("images"));
 // PORT
 const PORT = 4000;
 
-module.exports = {
-  endpoint: HOSTNAME,
-  port: PORT,
-};
+// module.exports = {
+//   endpoint: HOSTNAME,
+//   port: PORT,
+// };
 
 // Middleware
 app.use(bodyParser.json());
