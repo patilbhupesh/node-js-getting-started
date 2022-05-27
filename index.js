@@ -13,7 +13,7 @@ const apiErrorHandler = require("./error/api-error-handler");
 InitiateMongoServer();
 
 const app = express();
-const HOSTNAME = "https://api.winbings.com";
+const HOSTNAME = "https://damp-island-35095.herokuapp.com";
 
 app.use(cors());
 app.use(express.static("images"));
