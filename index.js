@@ -5,8 +5,8 @@ const category = require("./routes/category"); //new addition
 const items = require("./routes/items"); //new addition
 const InitiateMongoServer = require("./config/db");
 const cors = require("cors");
-const swaggerUi = require("swagger-ui-express");
-const swaggerJsdoc = require("swagger-jsdoc");
+// const swaggerUi = require("swagger-ui-express");
+// const swaggerJsdoc = require("swagger-jsdoc");
 const apiErrorHandler = require("./error/api-error-handler");
 
 // Initiate Mongo Server
@@ -40,8 +40,8 @@ const options = {
   apis: ["./routes/*.js"], // files containing annotations as above
 };
 
-const openApiSpecification = swaggerJsdoc(options);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiSpecification));
+// const openApiSpecification = swaggerJsdoc(options);
+// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(openApiSpecification));
 
 app.get("/", (req, res) => {
   res.json({ message: "API Working" });
